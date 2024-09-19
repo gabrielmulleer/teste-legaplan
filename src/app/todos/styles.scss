@@ -1,0 +1,46 @@
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.todo-input {
+  /* Reset default styles */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  outline: none;
+
+  /* Basic styling */
+  width: 100%;
+  padding: 16px;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.36px;
+  letter-spacing: -0.02em;
+
+  color: #333;
+  background-color: #fff;
+
+  /* Border and shadow */
+  border: 1px solid rgba(215, 221, 233, 1);
+  border-radius: 8px;
+
+  /* Transition for hover and focus effects */
+  transition: all 0.3s ease;
+}
+
+.todo-input::placeholder {
+  color: rgba(0, 0, 0, 0.56);
+}
+
+.todo-input:hover {
+  border-color: #d0d0d0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.todo-input:focus {
+  border-color: #2196f3;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.2);
+}
