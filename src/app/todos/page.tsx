@@ -2,45 +2,45 @@
 import { Button } from '@/components/ui/Button/Button'
 import './styles.scss'
 import TodoItem from '@/components/ui/TodoItem/TodoItem'
-import { useState } from 'react'
 import { Card, CardContainer } from '@/components/ui/Card/Card'
 
-interface Todo {
-  id: number
-  text: string
-  completed: boolean
-}
+import AddTodo from './_components/add-todo'
+import { useTodos } from '@/hooks/useTodos'
+import { useEffect, useState } from 'react'
+import Image from 'next/image'
 
 export default function Todos() {
-  const [todos, setTodos] = useState<Todo[]>([
-    { id: 1, text: 'Fazer um bolo', completed: false },
-    { id: 2, text: 'Lavar a louça', completed: false },
-    { id: 3, text: 'Levar o lixo para fora', completed: true },
-  ])
+  const { todos, addTodo, deleteTodo, toggleTodo } = useTodos()
 
-  const toggleTodo = (id: number) => {
-    setTodos(
-      todos.map((todo) =>
-        todo.id === id ? { ...todo, completed: !todo.completed } : todo,
-      ),
-    )
-  }
+  const [loading, setLoading] = useState(true)
 
-  const deleteTodo = (id: number) => {
-    setTodos(todos.filter((todo) => todo.id !== id))
-  }
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setLoading(false)
+    }, 500)
+    return () => clearTimeout(timeoutId)
+  }, [])
 
   const incompleteTodos = todos.filter((todo) => !todo.completed)
   const completedTodos = todos.filter((todo) => todo.completed)
 
+  if (loading) {
+    return (
+      <div className="loading">
+        <span>Carregando tarefas...</span>
+        <Image
+          src="/assets/animations/bean-eater-loading.svg"
+          width={80}
+          height={80}
+          alt="Loading"
+        />
+      </div>
+    )
+  }
   return (
-    <div>
-      <h1>My Todo List</h1>
-      <Button variant="primary">Add Todo</Button>
-      <Button>Cancel</Button>
-      <Button variant="delete">Delete</Button>
+    <div className="todos-container">
       <Card>
-        <h4>Suas tarefas de hoje</h4>
+        <h4 className="card-title">Suas tarefas de hoje</h4>
         <CardContainer>
           {incompleteTodos.map((todo) => (
             <TodoItem
@@ -56,7 +56,7 @@ export default function Todos() {
 
         {completedTodos.length > 0 && (
           <>
-            <h4>Tarefas finalizadas</h4>
+            <h4 className="card-title">Tarefas finalizadas</h4>
             <CardContainer>
               {completedTodos.map((todo) => (
                 <TodoItem
@@ -72,6 +72,9 @@ export default function Todos() {
           </>
         )}
       </Card>
+      <AddTodo onAddTodo={addTodo}>
+        <Button variant="primary">Adicionar nova tarefa</Button>
+      </AddTodo>
     </div>
   )
 }
