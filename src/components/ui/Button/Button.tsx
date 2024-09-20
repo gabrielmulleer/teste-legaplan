@@ -1,7 +1,6 @@
 import * as React from 'react'
-import './Button.scss' // Supondo que o estilo SCSS esteja aqui
+import './Button.scss'
 
-// Definindo as variantes como tipos
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'delete' | 'default'
@@ -9,7 +8,6 @@ export interface ButtonProps
   rounded?: 'sm' | 'lg' | 'xl' | 'full' | 'default'
 }
 
-// Componente Button com forwardRef
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {

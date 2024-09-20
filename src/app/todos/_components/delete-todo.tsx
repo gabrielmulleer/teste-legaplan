@@ -17,10 +17,10 @@ const DeleteTodo: React.FC<DeleteTodoProps> = ({ children, onDelete }) => {
       <Modal.Trigger>{children}</Modal.Trigger>
       <Modal.Content>
         <Modal.Header>
-          <h4>Deletar tarefa</h4>
+          <h4 className="modal-title">Deletar tarefa</h4>
         </Modal.Header>
         <Modal.Description>
-          <p>Tem certeza que você deseja deletar essa tarefa?</p>
+          Tem certeza que você deseja deletar essa tarefa?
         </Modal.Description>
         <Modal.Footer>
           <Button onClick={handleDelete} variant="delete">

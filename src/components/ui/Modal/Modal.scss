@@ -30,11 +30,17 @@
 .modal-header {
   font-size: 1.5rem;
   margin-bottom: 2rem;
+  .modal-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29.04px;
+    letter-spacing: -0.02em;
+  }
 }
 
 .modal-description {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 24px;
   letter-spacing: -0.02em;
   color: rgba(0, 0, 0, 0.54);

@@ -29,7 +29,7 @@ const AddTodo: React.FC<AddTodoProps> = ({ children, onAddTodo }) => {
       <Modal.Trigger>{children}</Modal.Trigger>
       <Modal.Content>
         <Modal.Header>
-          <h4>Nova tarefa</h4>
+          <h4 className="modal-title">Nova tarefa</h4>
         </Modal.Header>
         <form className="todo-form" onSubmit={handleSubmit}>
           <span>Título</span>
