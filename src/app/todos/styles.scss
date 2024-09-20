@@ -1,3 +1,17 @@
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  span {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
 .todos-container {
   max-width: 28.125rem;
   margin: 0 auto;
@@ -8,14 +22,12 @@
   gap: 0.5rem;
 }
 .todo-input {
-  /* Reset default styles */
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   border: none;
   outline: none;
 
-  /* Basic styling */
   width: 100%;
   padding: 16px;
 
@@ -27,11 +39,9 @@
   color: #333;
   background-color: #fff;
 
-  /* Border and shadow */
   border: 1px solid rgba(215, 221, 233, 1);
   border-radius: 8px;
 
-  /* Transition for hover and focus effects */
   transition: all 0.3s ease;
 }
 
