@@ -1,3 +1,4 @@
+
 # Teste Técnico - Desenvolvedor Front-end Jr na Legaplan
 
 ## Descrição do Projeto
@@ -19,7 +20,7 @@ Este projeto foi desenvolvido como parte do teste técnico para a vaga de Desenv
 
 O design da aplicação foi inspirado no protótipo disponível no Figma: [Teste Dev Junior - Legaplan](https://www.figma.com/design/4iESWnasLZSHyghg1ipj1P/Teste-Dev-Junior---Legaplan?node-id=8-442&node-type=frame&t=PN4adnMFwDO7NQoC-0)
 
-## Link Deployado
+## Link
 
 A aplicação está disponível em: [teste-legaplan-gm.vercel.app](https://teste-legaplan-gm.vercel.app)
 
@@ -34,3 +35,27 @@ Para rodar o projeto localmente, siga os passos abaixo:
 1. Clone o repositório:
    ```bash
    git clone https://github.com/gabrielmulleer/teste-legaplan.git
+   ```
+
+2. Navegue até o diretório do projeto:
+   ```bash
+   cd teste-legaplan
+   ```
+
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
+
+4. Execute o projeto:
+   ```bash
+   npm run dev
+   ```
+
+5. Acesse a aplicação em [http://localhost:3000](http://localhost:3000).
+
+## Conclusão
+
+Esse projeto demonstra minhas habilidades em desenvolvimento front-end, incluindo a utilização de Next.js e SCSS para criar uma interface de usuário interativa e funcional. Agradeço pela oportunidade de participar do processo seletivo.
+
+
