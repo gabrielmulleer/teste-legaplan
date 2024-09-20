@@ -1,18 +1,19 @@
+import RouteGuard from '@/components/RouteGuard/RouteGuard'
 import Header from '@/components/ui/Header/Header'
 
-export default async function LocaleLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
-  params: { locale: string }
 }) {
-  // Providing all messages to the client
-  // side is the easiest way to get started
-
   return (
-    <>
-      <Header />
-      {children}
-    </>
+    <html lang="en">
+      <body>
+        <RouteGuard>
+          <Header />
+          <main>{children}</main>
+        </RouteGuard>
+      </body>
+    </html>
   )
 }
