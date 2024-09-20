@@ -1,0 +1,80 @@
+/* Estilos base do botão */
+.btn {
+  padding: 16px 24px;
+  font-size: 16px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  border: none;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Variantes de cor */
+
+/* Primary: Gradiente azul */
+.btn-primary {
+  background: linear-gradient(90deg, #0796d3 0%, #53c0f0 68.65%);
+
+  &:hover {
+    background: linear-gradient(90deg, #0585bd 0%, #4eb3e4 68.65%);
+  }
+}
+
+/* Delete: Gradiente vermelho */
+.btn-delete {
+  background: linear-gradient(90deg, #d30707 0%, #f05353 68.65%);
+
+  &:hover {
+    background: linear-gradient(90deg, #ba0606 0%, #d94343 68.65%);
+  }
+}
+
+/* Default: Cor sólida */
+.btn-default {
+  background-color: #e7eefb;
+  color: black;
+
+  &:hover {
+    background-color: #d6e2f5;
+  }
+}
+
+/* Tamanhos */
+.btn-size-default {
+  height: 40px;
+  padding: 10px 20px;
+}
+
+.btn-size-sm {
+  height: 35px;
+  padding: 8px 16px;
+}
+
+.btn-size-lg {
+  height: 51px;
+  padding: 16px 24px;
+}
+
+/* Bordas */
+.btn-rounded-default {
+  border-radius: 8px;
+}
+
+.btn-rounded-sm {
+  border-radius: 3px;
+}
+
+.btn-rounded-lg {
+  border-radius: 10px;
+}
+
+.btn-rounded-xl {
+  border-radius: 15px;
+}
+
+.btn-rounded-full {
+  border-radius: 999px;
+}

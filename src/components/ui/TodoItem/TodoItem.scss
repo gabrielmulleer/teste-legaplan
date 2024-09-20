@@ -1,0 +1,74 @@
+.todoItem {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 1rem;
+  border: 1px dashed #d7dde9;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  background-color: #fff;
+
+  &:hover {
+    background-color: #f7f9fd;
+    border: 1px solid #f7f9fd;
+  }
+
+  &.completed {
+    .text {
+      text-decoration: line-through;
+      color: #0000008a;
+    }
+  }
+}
+
+.checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  cursor: pointer;
+  position: relative;
+
+  &:checked {
+    background-color: #a0dcf6;
+    border-color: #0796d3;
+
+    &::after {
+      content: '\2714';
+      font-size: 14px;
+      color: #0796d3;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.text {
+  flex-grow: 1;
+  font-weight: 500;
+}
+
+.deleteButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 10px;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    color: #888;
+    transition: color 0.3s ease;
+  }
+
+  &:hover svg {
+    color: #ff4444;
+  }
+}
