@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Teste Técnico - Desenvolvedor Front-end Jr na Legaplan
 
-## Getting Started
+## Descrição do Projeto
 
-First, run the development server:
+Este projeto foi desenvolvido como parte do teste técnico para a vaga de Desenvolvedor Front-end Jr na Legaplan. O objetivo é criar uma aplicação de lista de tarefas com funcionalidades para obter, adicionar e deletar tarefas.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tecnologias Utilizadas
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Next.js**: Framework React para a construção de interfaces de usuário.
+- **SCSS**: Extensão do CSS que permite o uso de variáveis, aninhamento e outras funcionalidades para estilização.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Funcionalidades
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Obter todas as tarefas**: A aplicação carrega e exibe todas as tarefas armazenadas.
+- **Adicionar novas tarefas**: Permite que o usuário adicione novas tarefas à lista.
+- **Deletar tarefas**: O usuário pode remover tarefas específicas da lista.
 
-## Learn More
+## Figma
 
-To learn more about Next.js, take a look at the following resources:
+O design da aplicação foi inspirado no protótipo disponível no Figma: [Teste Dev Junior - Legaplan](https://www.figma.com/design/4iESWnasLZSHyghg1ipj1P/Teste-Dev-Junior---Legaplan?node-id=8-442&node-type=frame&t=PN4adnMFwDO7NQoC-0)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Link Deployado
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+A aplicação está disponível em: [teste-legaplan-gm.vercel.app](https://teste-legaplan-gm.vercel.app)
 
-## Deploy on Vercel
+## Repositório
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+O código fonte do projeto pode ser encontrado no GitHub: [gabrielmulleer/teste-legaplan](https://github.com/gabrielmulleer/teste-legaplan)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Instruções de Execução
+
+Para rodar o projeto localmente, siga os passos abaixo:
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/gabrielmulleer/teste-legaplan.git
